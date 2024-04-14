@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoDiskCleanup", "AutoDiskCleanup\AutoDiskCleanup.csproj", "{F0079864-A0D3-49BE-9CB1-B634782FD253}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDiskCleanup.Tests", "AutoDiskCleanup.Tests\AutoDiskCleanup.Tests.csproj", "{E72D0789-EA2D-49F7-A90F-160A20E59C56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoDiskCleanup.Tests", "AutoDiskCleanup.Tests\AutoDiskCleanup.Tests.csproj", "{E72D0789-EA2D-49F7-A90F-160A20E59C56}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AutoDiskCleanup.Installer", "AutoDiskCleanup.Installer\AutoDiskCleanup.Installer.vdproj", "{10B28D4C-27A7-469A-8866-E82975E51410}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,8 @@ Global
 		{E72D0789-EA2D-49F7-A90F-160A20E59C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E72D0789-EA2D-49F7-A90F-160A20E59C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E72D0789-EA2D-49F7-A90F-160A20E59C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10B28D4C-27A7-469A-8866-E82975E51410}.Debug|Any CPU.ActiveCfg = Debug
+		{10B28D4C-27A7-469A-8866-E82975E51410}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

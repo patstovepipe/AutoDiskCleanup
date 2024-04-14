@@ -6,6 +6,7 @@ This C# project automates disk cleanup by deleting old folders within a specifie
 ### Features
 
 * Windows Service: Runs in the background to automatically delete old folders based on your configuration.
+* Easy Installation: Uses an MSI installer for simple deployment.
 * Logging: Detailed logs are written to a central location for troubleshooting.
 * Configurable Settings: Manage cleanup behavior through the `appsettings.json` file.
 * Unit Tests: Ensure code functionality by testing application logic.
@@ -21,6 +22,20 @@ The source code for this project is written in C# and consists of two subproject
 
 1. **AutoDiskCleanup**: This subproject contains the Windows service implementation responsible for deleting old folders.
 2. **AutoDiskCleanup.Tests**: This subproject contains the units tests for the project above.
+2. **AutoDiskCleanup.Installer**: This subproject contains the code for building the MSI installer which is then used to install the service.
+
+### Building Installer
+
+1. Open the solution file (`AutoDiskCleanup.sln`) in Visual Studio 2022.
+2. Select the **Release** configuration.
+3. Build the solution (**Build** -> **Build Solution**). 
+4. Publish the **AutoDiskCleanup** subproject (**Build** -> **Publish Selection**).
+5. Build the **AutoDiskCleanup.Installer** subproject. This will create the MSI installer in the `Release` folder of the **AutoDiskCleanup.Installer** subproject.
+
+### Installation
+
+1. Either use the latest installer from the **Installers** folder or create a new installer (documented above).
+3. Double-click the MSI file (e.g. `AutoDiskCleanup.Installer.msi`) to install the service.
 
 ### Configuration
 
@@ -41,6 +56,16 @@ The service uses an `appsettings.json` file located in the same directory as the
 ```
 
 **Note:** You will need to restart the service for configuration changes in `appsettings.json` to take effect.
+
+### Usage
+
+The Windows service is not automatically started when installed. You can manage the service from the Windows Services window (**Start** -> **Run**, type `services.msc`, and press Enter). From there right click **Auto Disk Cleanup** and select **Start**
+
+### Uninstallation
+
+1. Open **Add or Remove Programs** (or **Programs and Features**) in the Control Panel.
+2. Find and select **Auto Disk Cleanup**.
+3. Click **Uninstall** and follow the on-screen instructions.
 
 ### Logging
 

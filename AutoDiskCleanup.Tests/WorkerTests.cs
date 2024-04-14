@@ -35,7 +35,7 @@ namespace AutoDiskCleanup.Tests
                     It.Is<It.IsAnyType>((v, t) => v.ToString() == "Running once-off folder cleanup at start of service."),
                     It.IsAny<Exception>(),
                     It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)
-                )
+                ), Times.Once
             );
         }
 
